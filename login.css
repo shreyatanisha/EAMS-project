@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0b0228 40%, #7b5cff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: #0b0228;
+  color: white;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.logo span {
+  color: #7b5cff;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #7b5cff;
+}
+
+.signin-btn {
+  background: #7b5cff;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+/* Login Section */
+.login-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.login-box {
+  background: white;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: slideIn 0.9s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.login-box h2 {
+  color: #0b0228;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #7b5cff;
+  outline: none;
+}
+
+.login-btn {
+  background: #7b5cff;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background: #9b82ff;
+}
+
+.signup-text {
+  margin-top: 20px;
+  color: #555;
+}
+
+.signup-text a {
+  color: #7b5cff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background: #0b0228;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0b0228;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

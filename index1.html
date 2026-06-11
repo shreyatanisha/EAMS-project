@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Appraisal Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Chart.js CDN for example chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+
+  <header class="navbar">
+    <div class="logo">Appraise<span>Pro</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index1.html">Dashboard</a>
+
+      <li class="dropdown">
+        <a href="#">Activity</a>
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Department</a>
+          <a href="#">Employee Profile</a>
+          <a href="#">Employee Approved</a>
+          <a href="#">Project</a>
+          <a href="#">Approve Project</a>
+          <a href="#">Lead Assignment</a>
+          <a href="#">Job Assignment</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Projects ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Approve Project</a></li>
+          <li><a href="#">Lead Assignment</a></li>
+          <li><a href="#">Job Assignment</a></li>
+        </ul>
+      </li>
+
+      <a href="login.html" class="signin-btn">Sign In</a>
+    </nav>
+    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+  </header>
+
+
+
+  <main class="main-content">
+
+    <section class="cards">
+      <div class="card">
+        <div class="title">Total Employees</div>
+        <div class="value" id="totalEmployees">120</div>
+      </div>
+      <div class="card">
+        <div class="title">Appraisals Due</div>
+        <div class="value" id="appraisalsDue">5</div>
+      </div>
+      <div class="card">
+        <div class="title">Feedback Pending</div>
+        <div class="value" id="feedbackPending">3</div>
+      </div>
+      <div class="card">
+        <div class="title">Average Rating</div>
+        <div class="value" id="averageRating">4.2</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Upcoming Deadlines</h2>
+      <div class="tasks">
+        <ul id="taskList">
+          <li>Self‑Appraisal due in <strong>3 days</strong></li>
+          <li>Manager Review pending for <strong>Employee ID 45</strong></li>
+          <li>Peer feedback requests: 2 pending</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Performance Trends</h2>
+      <div class="chart-container card">
+        <canvas id="performanceChart"></canvas>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Recent Feedback</h2>
+      <div class="feedbacks">
+        <ul id="feedbackList">
+          <li>Manager: “Good improvement in team collaboration.”</li>
+          <li>Peer: “Needs better time management.”</li>
+          <li>Self: “Worked on skill X this cycle.”</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Quick Actions</h2>
+      <div class="actions">
+        <button class="btn" onclick="action('startAppraisal')">Start New Appraisal</button>
+        <button class="btn" onclick="action('submitFeedback')">Submit Feedback</button>
+        <button class="btn" onclick="action('viewHistory')">View My History</button>
+        <button class="btn" onclick="action('generateReport')">Generate Report</button>
+      </div>
+    </section>
+
+  </main>
+  </div>
+
+  <footer>
+    Employee Appraisal System | v1.0.0 | Help Center | Privacy Policy
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Appraisal Management System - Home</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" type="image/png">
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar">
+    <div class="nav-logo">E-Appraisal</div>
+
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navMenu">
+      <!-- <li><a href="home.html">Home</a></li>       -->
+      <!-- <li><a href="index1.html">Dashboard</a></li> -->
+
+      <li class="dropdown">
+        <a href="#">Activity ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Department</a></li>
+          <li><a href="#">Employee Profile</a></li>
+          <li><a href="#">Employee Approved</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Projects ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Approve Project</a></li>
+          <li><a href="#">Lead Assignment</a></li>
+          <li><a href="#">Job Assignment</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+
+    <div class="nav-profile">
+      <a href="login.html" class="btn-login">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section class="hero">
+    <h1>Employee Appraisal Management System</h1>
+    <p>Streamline performance reviews, set goals, and evaluate achievements — all in one platform.</p>
+    <button onclick="window.location.href='login.html'">Get Started</button>
+  </section>
+
+  <!-- ====== ABOUT SECTION ====== -->
+  <section id="about" class="about-section">
+    <h2>About the System</h2>
+    <p>The Employee Appraisal Management System helps organizations simplify the evaluation process by tracking employee performance, setting measurable goals, and improving feedback transparency.</p>
+  </section>
+
+  <!-- ====== FEATURES SECTION ====== -->
+  <section id="features" class="features">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="card">
+        <h3>Automated Reviews</h3>
+        <p>Automate the entire employee review process for better efficiency.</p>
+      </div>
+      <div class="card">
+        <h3>Performance Tracking</h3>
+        <p>Track employee progress with clear, visual performance reports.</p>
+      </div>
+      <div class="card">
+        <h3>Goal Management</h3>
+        <p>Align goals across departments and measure achievements effectively.</p>
+      </div>
+      <div class="card">
+        <h3>Secure Access</h3>
+        <p>Ensure data integrity with role-based authentication and encryption.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    Employee Appraisal System | v1.0.0 | Help Center | Privacy Policy
+  </footer>
+
+  <!-- ====== JS ====== -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+
+/* ========== GLOBAL ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9fafc;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* ========== NAVBAR (unchanged) ========== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a237e;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffca28;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background-color: #283593;
+  border-radius: 8px;
+  list-style: none;
+  min-width: 180px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: white;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #3949ab;
+  color: #ffca28;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-profile .btn-login {
+  background-color: #ffca28;
+  color: #1a237e;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-profile .btn-login:hover {
+  background-color: #fff176;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* ========== HERO SECTION (new style) ========== */
+.hero {
+  background: linear-gradient(
+      rgba(26, 35, 126, 0.85),
+      rgba(26, 35, 126, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d")
+      center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 10rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 30px 30px;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  animation: fadeInDown 1s ease;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+.hero button {
+  background: rgba(255, 202, 40, 0.95);
+  border: none;
+  padding: 0.9rem 2.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #1a237e;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+  background: #fff176;
+}
+
+/* ========== ABOUT SECTION (modern layout) ========== */
+.about-section {
+  background-color: #fff;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-section h2 {
+  width: 100%;
+  text-align: center;
+  color: #1a237e;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  max-width: 700px;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ========== FEATURES SECTION (revamped) ========== */
+.features {
+  background: linear-gradient(to bottom right, #e8eaf6, #fff);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.features h2 {
+  color: #1a237e;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(26, 35, 126, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card::before {
+  content: "★";
+  font-size: 2rem;
+  color: #ffca28;
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(26, 35, 126, 0.2);
+}
+
+.card h3 {
+  color: #1a237e;
+  margin: 1rem 0;
+}
+
+.card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ========== FOOTER (same as before) ========== */
+footer {
+  background-color: #1a237e;
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  letter-spacing: 0.5px;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1a237e;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: #283593;
+    box-shadow: none;
+  }
+
+  .nav-profile {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
