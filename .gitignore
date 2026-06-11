@@ -1,0 +1,27 @@
+# Ignore generated and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ignore archives and package files
+*.zip
+*.tar.gz
+*.tgz
+
+# Ignore office and image assets that do not belong in the source repo
+*.pptx
+*.ppt
+*.docx
+*.xlsx
+*.jpeg
+*.jpg
+*.png
+*.gif
+
+# Ignore editor folders
+.vscode/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
